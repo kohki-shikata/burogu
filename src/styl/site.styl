@@ -1,0 +1,277 @@
+@import 'nib'
+@import "kouto-swiss"
+@import 'rupture'
+@import 'jeet'
+@import 'node_modules/wallop/css/wallop.css'
+@import 'node_modules/wallop/css/wallop--fade.css'
+
+normalize()
+box-sizing-reset()
+
+rupture.scale = 0 320px 400px 768px 1024px 1280px 1680px
+rupture.scale-names = 'xs' 's' 'm' 'l' 'xl' 'xxl'
+
+
+site-beige = #F5F3EC
+site-beige-dark = #A58A2C
+site-beige-chacoal = #766F5A
+site-beige-light = #F8F8F8
+site-link = #1950A8
+text-desc = #7B7B7B
+text-light = #95989A
+line-light = #DBDBDB
+
+*
+  margin-top 0 !important
+
+  & > *:first-child
+    margin-top 0 !important
+  & > *:last-child
+    margin-bottom 0 !important
+
+a
+  color site-link
+  &:hover
+    color lighten(site-link, 30%)
+  text-decoration none
+
+.img
+  img
+    max-width 100%
+
+.cat-label
+  display inline-block
+  font-size 12px
+  padding 7px
+  margin 0
+  background-color site-beige-dark
+  color #fff
+  &.topleft
+    position absolute
+    top 0
+    left 0
+
+.btn
+  font-size 18px
+  border 1px solid site-link
+  display inline-block
+  color site-link
+  text-decoration none
+  padding 10px 40px
+  margin 0 auto
+
+  &-wrap
+    text-align center
+    &.right
+      text-align right
+
+.posts
+  center()
+  margin-bottom 60px
+
+.post
+  background-color #fff
+  padding 40px
+  margin-bottom 40px
+  clearfix()
+  +below(840px)
+    column(1/2, $cycle: 2)
+  +below(640px)
+    column(1)
+
+  &-eyecatch
+    +below(6)
+      max-width 38%
+    +below(840px)
+      float none
+      max-width 100%
+    width 100%
+    width 374px
+    float left
+    margin-right 30px
+    position relative
+
+  &-main
+    width 556px
+    float right
+    +below(6)
+      max-width 57.7%
+
+    +below(840px)
+      float none
+      max-width 100%
+      margin 0
+
+  &-title
+    font-size 24px
+  time
+    font-size 14px
+    color text-light
+    display inline-block
+    margin-bottom 10px
+  &-title
+    font-size 20px
+  .desc
+    font-size 15px
+    line-height 1.46666
+    color text-desc
+  .btn
+    font-size 18px
+
+.pagination
+  text-align center
+  margin-bottom 60px !important
+  .extend,.page-number
+    font-size 20px
+    border 1px solid site-link
+    color site-link
+    background-color #fff
+    display inline-block
+    min-height 33px
+    min-width 33px
+    text-decoration none
+    margin-left 11px
+    &.current
+      color text-light
+      border 0
+    text-align center
+    padding-top 4px
+  .extend
+    padding-left 20px
+    padding-right 20px
+
+
+.main-ttl
+  border-bottom 1px solid line-light
+  &-inner
+    display inline-block
+    padding-bottom 8px
+    border-bottom 1px solid site-beige-dark
+    position relative
+    bottom -1px
+
+.header
+  &-row
+    center(1600px)
+    +below(6)
+      center(1200px)
+
+  &-caption
+    background-color site-beige
+    &-inner
+      center(1600px)
+      padding-top 10px
+      padding-bottom 10px
+      p
+        font-size 14px
+        color text-light
+  &-logo
+    column(2/8)
+    padding-top 10px
+    padding-bottom 10px
+    margin-bottom 0
+    +below(5)
+      column(1)
+      text-align center
+  &-nav
+    column(6/8)
+    +below(5)
+      column(1)
+    display table
+    padding-top 25px
+    padding-bottom 25px
+    padding-left 0
+    text-align right
+    font-size 0
+    &-item
+      display table-cell
+      width 268px
+      height 50px
+      margin 0
+      font-size 16px
+      +below(5)
+        width 25%
+      text-align center
+      position relative
+      border-left 1px solid line-light
+      &:last-child
+        border-right 1px solid line-light
+      &-inner
+        position absolute
+        top 50%
+        left 50%
+        transform translate(-50%,-50%)
+      a
+        display block
+        width 100%
+        height 100%
+
+    +below(3)
+      column(1)
+
+.main
+  background-color site-beige-light
+
+  &-hero
+    background-color #EAF9FC
+    padding-top 57px
+    padding-bottom 57px
+    margin-bottom 64px
+    &-row
+      center(1600px)
+      +below(6)
+        center(1200px)
+      +below(1200px)
+        center(1000px)
+    &-item
+      column(1/3)
+      background-color #fff
+      .eyecatch
+        img
+          width 100%
+      &-title
+        padding 15px
+        .post-meta
+          padding-left 0
+          margin-top -50px !important
+          margin-bottom 20px
+
+  &-row
+    center(1600px)
+    +below(6)
+      center(1200px)
+  &-content
+    width 66%
+    float left
+    +below(1200px)
+      width 95%
+      float none
+      margin 0 auto 60px
+  &-sidebar
+    width 31%
+    float right
+    +below(1200px)
+      float none
+      width 95%
+      margin 0 auto 60px
+    &-category
+      padding-left 0
+      &-item
+        border-bottom 1px solid line-light
+        list-style-type none
+        font-size 18px
+        padding-top 32px
+        padding-bottom 32px
+
+.footer
+  &-sns
+    background-color site-beige-chacoal
+    &-inner
+      center(1000px)
+    &-item
+      text-align center
+      display inline-block
+      column(1/3,$cycle:3)
+      list-style-type none
+      a
+        color #fff

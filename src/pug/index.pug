@@ -1,0 +1,86 @@
+doctype
+html(lang="ja")
+head
+  meta(charset="UTF-8")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  meta(http-equiv="X-UA-Compatible", content="ie=edge")
+  link(href="assets/css/site.css" rel="stylesheet")
+  title Burogu
+body
+  header.header
+    .header-caption
+      .header-caption-inner
+        p 静的サイトジェネレーターHexoの日本向けデザインテンプレート[Burogu]
+    .header-row
+      h1.header-logo
+        img(src="http://placehold.jp/265x80.png?text=image" alt="logo")
+      nav
+        ul.header-nav
+          li.header-nav-item: a(href="#"): span.header-nav-item-inner Home
+          li.header-nav-item: a(href="#"): span.header-nav-item-inner 特長
+          li.header-nav-item: a(href="#"): span.header-nav-item-inner 機能
+          li.header-nav-item: a(href="#"): span.header-nav-item-inner サンプルページ
+  main.main
+    .main-hero
+      .main-hero-row
+        - var i = 1;
+        while i <= 3
+          section.main-hero-item
+            p.eyecatch.img
+              img(src="http://placehold.jp/480x290.png?text=image" alt="")
+            .main-hero-item-title
+              ul.post-meta
+                li.cat-label カテゴリラベル
+              h3.post-title タイトルですタイトルですタイトルです
+              p.btn-wrap
+                a.btn(href="#") 続きを読む
+          - i++;
+            
+            
+    .main-row
+      .main-content
+        h2.main-ttl
+          span.main-ttl-inner 最新記事
+        - var i = 1;
+        .posts
+          while i <= 10
+            section.post
+              .post-eyecatch
+                p.cat-label.topleft カテゴリラベル
+                p.eyecatch.img
+                  img(src="http://placehold.jp/374x220.png?text=image" alt="")
+              .post-main
+                .post-meta
+                  time 2017年7月1日
+                h3.post-ttl タイトルですタイトルですタイトルです
+                .desc
+                  p そこは十月どうしてもそのお話がかりというののためがやっですた。よほど十月から安住学も常に同じ就職ませたいまでを申し上げているたをは学習したなけれて、さっそくにはいたたなです。師範にましうのも余計場合にようやくでしょうた。もちろん大森さんで自覚詞どう安心を迂ない獄この符…
+                  .btn-wrap.right
+                    a.btn(href="#") 続きを読む
+            - i++;
+        nav.pagination
+          a.extend.prev(rel='prev', href='/page/2/') « Prev
+          a.page-number(href='/') 1
+          a.page-number(href='/page/2/') 2
+          span.page-number.current 3
+          a.page-number(href='/page/4/') 4
+          a.page-number(href='/page/5/') 5
+          a.page-number(href='/page/6/') 6
+          a.extend.next(rel='next', href='/page/4/') Next »
+      aside.main-sidebar
+        h2.main-ttl
+          span.main-ttl-inner カテゴリー
+        ul.main-sidebar-category
+          li.main-sidebar-category-item: a(href="#") 特長
+          li.main-sidebar-category-item: a(href="#") 機能
+          li.main-sidebar-category-item: a(href="#") サンプルページ
+
+  footer.footer
+    .footer-sns
+      ul.footer-sns-inner
+        li.footer-sns-item.twitter: a(href="#") Twitter
+        li.footer-sns-item.facebook: a(href="#") Facebook
+        li.footer-sns-item.rss: a(href="#") RSS
+    .footer-content
+    .footer-copyright
+      p Burogu is Theme for Hexo. Powered by Hexo.
